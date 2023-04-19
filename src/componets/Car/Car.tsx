@@ -1,0 +1,34 @@
+import {FC} from 'react'
+
+import {ICar} from "../../interfaces/car.interface";
+import './Car.css'
+import {carService} from "../../services/car.service";
+import {IUseState} from "../../types/useStateType";
+
+interface IProps{
+    car:ICar
+    setState: IUseState<boolean>
+
+}
+
+const Car: FC<IProps> = ({car,setState}) =>{
+    const {id,year,price,brand} = car;
+    const deleteCar = async (id:number)=>{
+        await carService.delete(id)
+        setState( prev =>!prev)
+    }
+
+
+
+return(
+       <div className={'cars'}>
+           <li>{id}</li>
+           <li>{brand}</li>
+           <li>{price}</li>
+           <li>{year}</li>
+           <button onClick={()=>deleteCar(id)}>Delete</button>
+
+       </div>
+    );
+};
+export default Car

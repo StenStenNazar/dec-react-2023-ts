@@ -1,13 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {Routes, Route} from 'react-router-dom'
+
+import './App.css'
+import Header from "./componets/Header/Header";
+import Users from './componets/Users/Users';
+import Comments from "./componets/Comments/Comments";
+import Cars from './componets/Cars/Cars';
 
 function App() {
-  return (
-    <div className="App">
-
-    </div>
-  );
+    return (
+        <div>
+            <Header/>
+            <Routes>
+              <Route path='/users' element={<Users/>}/>
+              <Route path='/comments' element={<Comments/>}/>
+              <Route path='/cars' element={<Cars/>}/>
+            </Routes>
+        </div>
+    );
 }
 
 export default App;
