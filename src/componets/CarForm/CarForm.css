@@ -1,0 +1,25 @@
+.errors{
+    display: flex;
+    height:30px;
+    width: 400px;
+    color: red;
+    font-family: sans-serif;
+    text-decoration: none;
+    position: relative;
+}
+.car_form_teg{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.delete_update{
+    display: flex;
+    justify-content: center;align-items: center;
+    width: 50px;
+}
+
+.input_car_form{
+    display: flex;
+    flex-direction: column;
+}
