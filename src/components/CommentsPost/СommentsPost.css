@@ -1,0 +1,11 @@
+.comments_post{
+    border-radius: 15px;
+    border: 1px solid black;
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    position: sticky;
+    top:250px;
+}

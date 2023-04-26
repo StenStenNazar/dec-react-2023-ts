@@ -1,0 +1,8 @@
+.album{
+    border:1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+    width: 200px;
+    height: 80px;
+}

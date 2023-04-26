@@ -1,0 +1,14 @@
+.header{
+    height: 50px;
+    background-color: lightslategrey;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav{
+    color: black;
+    font-family: sans-serif;
+    font-size: 25px;
+}
