@@ -4,3 +4,7 @@ export interface ErrorInterface{
     price?:string[],
     year?:string[]
 }
+
+export interface IError{
+    detail?: string
+}

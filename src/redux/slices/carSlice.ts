@@ -4,6 +4,7 @@ import {AxiosError} from "axios";
 import {CarInterface} from "../../interfaces/car.interface";
 import {carService} from "../../services/car.service";
 import {ErrorInterface} from "../../interfaces/error.interface";
+import {IPaganation} from "../../interfaces/pagination.interface";
 
 
 interface IState {
@@ -20,7 +21,7 @@ const initialState: IState = {
     errors: null
 }
 
-const getAll = createAsyncThunk<CarInterface[], void>(
+const getAll = createAsyncThunk<IPaganation<CarInterface[]>, void>(
     'carSlice/getAll',
     async (_, {rejectWithValue}) => {
         try {
@@ -83,8 +84,8 @@ const carSlice = createSlice({
     extraReducers: builder =>
         builder
             .addCase(getAll.fulfilled, (state, action) => {
-                state.cars = action.payload
-
+                const {items}= action.payload
+                state.cars = items
             })
             .addCase(updateCar.fulfilled, (state) => {
                 state.carForUpdate = null

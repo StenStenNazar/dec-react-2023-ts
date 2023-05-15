@@ -3,4 +3,5 @@ export interface CarInterface{
     price:number,
     brand:string,
     year: number
+    photo?:string
 }
